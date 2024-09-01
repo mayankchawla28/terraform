@@ -1,0 +1,1 @@
+terraform -chdir="D:\terra\terraform" plan -var-file="dev.tfvars"

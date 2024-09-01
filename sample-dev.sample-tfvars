@@ -1,0 +1,3 @@
+aws_region = "dummy"
+aws_secret_key = "dummy_secret_key"
+aws_access_key_id = "dummy_access_key"
