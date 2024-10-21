@@ -1,1 +1,32 @@
-terraform -chdir="D:\terra\terraform" plan -var-file="dev.tfvars"
+# Initialize Terraform
+terraform init
+
+# Validate the configuration
+terraform validate
+
+# Plan the deployment and save 
+terraform -chdir="D:\terra\terraform" plan -out="test-vpc.tfplan" -var-file="dev.tfvars"
+
+# Apply the configuration and choose file
+terraform -chdir="D:\terra\terraform" apply "test-vpc.tfplan"
+
+# save output
+terraform output -json > outputs.json
+
+# Destroys all infrastructure
+terraform destroy
+
+# Formats Terraform configuration files 
+terraform fmt
+
+# Updates the Terraform state file
+terraform refresh
+
+# terraform state list 
+terraform state list
+
+#  current state and save
+terraform state pull
+
+# Transaction Apply the changes
+terraform -chdir="D:\terra\terraform" apply "test-vpc.tfplan" || { echo "Apply failed, rolling back."; terraform apply <previous_plan>; }

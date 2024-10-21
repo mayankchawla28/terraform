@@ -1,35 +1,15 @@
-variable "aws_region" {
-  type        = string
-  description = "aws region name"
-  nullable    = false
-}
-
-variable "aws_secret_key" {
-  type        = string
-  description = "aws secret key"
-  nullable    = false
-  sensitive   = true
-}
-
-variable "aws_access_key_id" {
-  type        = string
-  description = "aws access key"
-  nullable    = false
-  sensitive   = true
-}
 variable "terraform_env" {
   description = "Terraform environment"
   type        = string
 }
 
-variable "cidr_block" {
-  description = "The CIDR block for the VPC."
+variable "vpc_id" {
+  description = "The ID of the VPC"
   type        = string
-  default     = "10.0.0.0/24"
 }
 
-variable "vpc_name" {
-  description = "The name of the test my VPC."
+variable "name" {
+  description = "The name of the VPC."
   type        = string
 }
 

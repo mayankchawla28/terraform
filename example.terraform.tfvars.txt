@@ -1,0 +1,15 @@
+# filename = "terraform.tfvars"
+terraform_env = "development"
+
+aws_region        = "ap-south-1"
+aws_secret_key    = ""
+aws_access_key_id = ""
+
+vpc_name   = "test-vpc"
+cidr_block = "10.0.12.0/26"
+
+public_subnet_cidrs  = ["10.0.12.0/28", "10.0.12.16/28"]
+private_subnet_cidrs = ["10.0.12.32/28", "10.0.12.48/28"]
+public_subnet_count  = 2
+private_subnet_count = 2
+availability_zones   = ["ap-south-1a", "ap-south-1b"]

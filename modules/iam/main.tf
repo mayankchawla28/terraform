@@ -1,6 +1,5 @@
-
 resource "aws_iam_group" "developers" {
-  name = "developers"
+  name = var.group_name
 }
 
 resource "aws_iam_group_policy_attachment" "developers_readonly_iam" {
